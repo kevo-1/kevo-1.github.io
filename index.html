@@ -1,142 +1,45 @@
-<header>
-  <link rel="stylesheet" href="src/styles.css" />
-  <img class="pfp" src="src/assets/pfp.jpg" />
-  <p>Kevin Bastawrous</p>
-  <div class="social-icons">
-    <a href="https://github.com/kevo-1" target="_blank">
-      <img src="src/assets/github.png" />
-    </a>
-    <a href="https://www.linkedin.com/in/kevin-hany/" target="_blank">
-      <img src="src/assets/linkedin.png" />
-    </a>
-    <a href="mailto:kevin.bastawrous@gmail.com">
-      <img src="src/assets/gmail.png" alt="Gmail" />
-    </a>
-  </div>
-</header>
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" author="Kevin Hany">
+    <title>Kevin Hany</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 <body>
-  <div class="Main-Content">
-    <div class="About-Me">
-      <p>
-        I am a computer science student at Ain-Shams university, I am interested
-        in problem solving and automating using python.
-        <br /><br />
-        <p style="font-weight: bold;">About me:</p>
-        • I love scripting and autmoating daily tasks using python. <br />• I
-        also love competitive programming and problem solving mainly using
-        C/C++.<br />
-        • I am interested in learning all about data-structures and algorithms.
-      </p>
+    <div id="curtain">
+        <div class="intro-text" id="introText">Hello, and welcome!</div>
     </div>
-    <div class="Skills">
-      <div class="Languages">
-        <p>Languages:</p>
-        <img
-          src="https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white"
-          alt="C++ Badge"
-        />
-        <img
-          src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54"
-          alt="Python Badge"
-        />
-        <img
-          src="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white"
-          alt="Java Badge"
-        />
-        <img
-          src="https://img.shields.io/badge/go-%2300ADD8.svg?style=for-the-badge&logo=go&logoColor=white"
-          alt="Go Badge"
-        />
-      </div>
-      <div class="Frameworks">
-        <p>Frameworks and Tech:</p>
-        <img
-          src="https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white"
-          alt="NumPy Badge"
-        />
-        <img
-          src="https://img.shields.io/badge/Matplotlib-%23ffffff.svg?style=for-the-badge&logo=Matplotlib&logoColor=black"
-          alt="Matplotlib Badge"
-        />
-        <img
-          src="https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white"
-          alt="Pandas Badge"
-        />
-      </div>
-      <div class="Socials">
-        <p>Socials:</p>
-        <a href="https://codeforces.com/profile/Kevin.H" target="_blank">
-          <img
-            src="https://img.shields.io/badge/Codeforces-%23FFCC33.svg?style=flat&logo=Codeforces&logoColor=black"
-            alt="Codeforces"
-          />
-        </a>
+    <div id="navigationContainer">
+        <a href="index.html">About</a>
+        <a>Projects</a>
+        <a>Contact Me</a>
+    </div>
+    <div id="header">
+        <div id="pfpImg">
+            <img id="pfp" src ="assets/pfp.jpg">
+        </div>
+        <div id="about">
+            <h1>About Me</h1>
+            <p>
+                Hello! my name is <b>Kevin Hany</b>, and I am a <b>computer science</b> student at Ain Shams University.
+                <br>
+                <br>
+                I am interested in multiple fields from <b>Backend development, AI/ML ,and Cyber security.</b>
+                <br>
+                <br>
+                I am open to new opportunities to <b>expanding my knowledge</b> about the wide technology spectrum.
+            </p>
+        </div>
+    </div>
+    <div id="mainbody">
+        <div id="skills">
+            
+        </div>
+        <div id="socials">
 
-        <a href="https://www.hackerrank.com/kevin_bastawrous" target="_blank">
-          <img
-            src="https://img.shields.io/badge/HackerRank-%232EC866.svg?style=flat&logo=HackerRank&logoColor=white"
-            alt="HackerRank"
-          />
-        </a>
-
-        <a href="https://leetcode.com/user1901PZ" target="_blank">
-          <img
-            src="https://img.shields.io/badge/LeetCode-%23FFA116.svg?style=flat&logo=LeetCode&logoColor=black"
-            alt="LeetCode"
-          />
-        </a>
-      </div>
+        </div>
     </div>
-  </div>
-
-  <div class="Projects">
-    <p class="title">Projects:</p>
-    <div class="Camaroo">
-      <br />
-      <a href="https://github.com/kevo-1/camaroo">
-        <p class="title">•Camaroo Interpreted Language:</p>
-      </a>
-      <p class="Projects-About">
-        Camaroo is an interpreted Language that I developed with a collegue of
-        mine, where we used c++ to efficiently tokenize, parse and evaluate
-        custom syntax into c++ code.
-      </p>
-    </div>
-    <div class="Aniwatch">
-      <br />
-      <a href="https://github.com/kevo-1/aniwatch">
-        <p class="title">•Aniwatch:</p>
-      </a>
-      <p class="Projects-About">
-        Aniwatch is a GUI application built with python that tracks the user's
-        desired animes and uses Anilist API to retrieve anime data from
-        Anilist's Database, and has discord live rpc to show the user's activity
-        on discord.
-      </p>
-    </div>
-    <div class="Url-Shortner">
-      <br />
-      <a href="https://github.com/kevo-1/URL-Shortner">
-        <p class="title">•Url-Shortner:</p>
-      </a>
-      <p class="Projects-About">
-        A simple URL shortener written in Go, which allows users to shorten URLs
-        and redirect them using a shortened hash.
-      </p>
-    </div>
-    <div class="Image-En-De-cryption">
-      <br />
-      <a href="https://github.com/kevo-1/Image-En-De-cryption">
-        <p class="title">•Image-En-De-cryption:</p>
-      </a>
-      <p class="Projects-About">
-        Image-En-De-cryption is a Python project that allows you to encrypt and
-        decrypt images using a logistic map-based algorithm, with plans to
-        incorporate AES encryption in the future. This tool provides an
-        easy-to-use GUI built with Tkinter for selecting, encrypting, and
-        decrypting image files.
-      </p>
-    </div>
-  </div>
+    <script src="scipt.js"></script>
 </body>
+</html>

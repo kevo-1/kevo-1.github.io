@@ -1,0 +1,196 @@
+/* Base styles (unchanged) */
+@font-face {
+    font-family: 'font1';
+    src: url('assets/trickster.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'font2';
+    src: url('assets/Lilex-Regular.ttf') format('truetype');
+}
+
+* {
+    font-family: 'font2';
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1a1a1a;
+}
+
+#navigationContainer {
+    text-align: right;
+    font-size: 30px;
+    color: #b1b3b6;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    background-color: #282828;
+}
+
+#navigationContainer a {
+    padding: 10px 15px;
+    text-align: left;
+    color: inherit;
+    display: inline-block;
+}
+
+#navigationContainer a:hover {
+    font-weight: bold;
+    animation-name: spaced;
+    animation-duration: 1s;
+    animation-iteration-count:infinite;
+}
+
+body {
+    margin: 0;
+    width: 100%;
+}
+
+#header {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 50px;
+    gap: 20px;
+    color:#b1b3b6;
+}
+
+#header h1:hover {
+    animation-name: spaced;
+    animation-duration: 1s;
+    animation-iteration-count:infinite;
+}
+
+#pfp {
+    width: 100%;
+    max-width: 300px;
+    height: auto; 
+    border-radius: 40%;
+    margin: 0 auto; 
+}
+
+#about {
+    font-size: 1.2rem;
+    padding: 0 20px;
+}
+
+@media (max-width: 768px) {
+    #navigationContainer {
+        text-align: center;
+        font-size: 20px;
+        padding-bottom: 30px;
+    }
+
+    #navigationContainer a {
+        padding: 8px 10px;
+    }
+
+    #header {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    #pfp {
+        max-width: 200px; 
+    }
+}
+
+@media (min-width: 769px) {
+    #header {
+        grid-template-columns: 1fr 2fr;
+    }
+}
+
+#curtain {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    overflow: hidden;
+    animation: ascend 2s ease forwards;
+    animation-delay: 4s;
+}
+
+.curtain,
+.intro-text {
+    animation: ascend 2s ease forwards;
+    animation-delay: 2s;
+}
+
+.curtain {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    background: black;
+    animation: ascend 2s ease forwards;
+    animation-delay: 4s;
+}
+
+.intro-text {
+    position: relative;
+    display: inline-block;
+    color: white;
+    font-size: 3rem;
+    font-family: 'font2';
+    z-index: 10000;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+    animation:
+        typing 3s steps(19, end) forwards 0.5s,
+        ascend 2s ease forwards 4s;
+}
+
+.intro-text::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0.15em;
+    height: 100%;
+    background-color: white;
+    animation: 
+        blinkCaret 0.75s step-end infinite,
+        hideCaret 0.01s linear forwards 3.5s;
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes blinkCaret {
+    from, to { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+@keyframes hideCaret {
+    to { opacity: 0; }
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 19ch }
+}
+
+@keyframes ascend {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
+@keyframes spaced {
+    0% {letter-spacing: 0.01vmin;}
+    50% {letter-spacing: 0.05vmin;}
+    100% {letter-spacing: none;}
+}
