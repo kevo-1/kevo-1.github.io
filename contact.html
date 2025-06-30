@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Kevin Bastawrous">
+    <title>Contact Me | Kevin Bastawrous</title>
+    <link rel="stylesheet" href="ContactPage/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav id="navigationContainer" aria-label="Main navigation">
+        <a href="index.html">About</a>
+        <a href="#">Projects</a>
+        <a href="contact.html" aria-current="page">Contact Me</a>
+    </nav>
+    
+    <main class="parent">
+        <div class="container">
+            <form class="contact-form" id="contactForm">
+                <h1 class="sr-only">Contact Form</h1>
+                <input placeholder="First Name" autofocus required type="text" id="fname" name="fname" aria-label="First Name">
+                <input placeholder="email@domain.extension" required type="email" id="mail" name="mail" aria-label="Email">
+                <textarea placeholder="Your message" required id="message" name="message" aria-label="Your Message"></textarea>
+                <button type="submit" id="submit">Submit</button>
+            </form>
+            
+            <div class="contact-info">  
+                <h2>Get in touch</h2>
+                <a href="mailto:kevin.bastawrous@gmail.com" id="email">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                    kevin.bastawrous@gmail.com
+                </a>
+                <p id="location">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                        <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                    Cairo, Egypt
+                </p>
+                <div class="social-buttons">
+                    <a href="https://linkedin.com/in/kevin-hany" target="_blank" class="social-btn linkedin" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://github.com/kevo-1" target="_blank" class="social-btn github" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://codeforces.com/profile/Kevin.H" target="_blank" class="social-btn codeforces" aria-label="Codeforces">
+                        <i class="fas fa-code"></i>
+                    </a>
+                    <a href="https://leetcode.com/u/user1901PZ/" target="_blank" class="social-btn leetcode" aria-label="LeetCode">
+                        <i class="fas fa-laptop-code"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

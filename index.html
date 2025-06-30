@@ -2,44 +2,102 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" author="Kevin Hany">
-    <title>Kevin Hany</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Kevin Hany">
+    <meta name="description" content="Portfolio of Kevin Hany, Computer Science student">
+    <title>Kevin Hany | Computer Science Student</title>
     <link rel="stylesheet" href="style.css">
+
+    <link rel="preload" href="assets/trickster.woff" as="font" type="font/woff" crossorigin>
+    <link rel="preload" href="assets/Lilex-Regular.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <div id="curtain">
-        <div class="intro-text" id="introText">Hello, and welcome!</div>
+        <div class="intro-text" id="introText" aria-hidden="true">Hello, and welcome!</div>
     </div>
-    <div id="navigationContainer">
-        <a href="index.html">About</a>
-        <a>Projects</a>
-        <a>Contact Me</a>
-    </div>
-    <div id="header">
+    
+    <nav id="navigationContainer" aria-label="Main navigation">
+        <div class="nav-left">
+            <a href="assets/Kevin Hany Bastawrous.pdf" target="_blank" rel="noopener noreferrer" class="cv-button">
+                <i class="fas fa-file-pdf"></i>
+                <span>CV</span>
+            </a>
+        </div>
+        <div class="nav-right">
+            <a href="index.html" aria-current="page">About</a>
+            <a href="#projects">Projects</a>
+            <a href="contact.html">Contact Me</a>
+        </div>
+    </nav>
+    
+    <header id="header">
         <div id="pfpImg">
-            <img id="pfp" src ="assets/pfp.jpg">
+            <img id="pfp" src="assets/pfp.jpg" alt="Kevin Hany's profile picture" width="300" height="300">
         </div>
         <div id="about">
             <h1>About Me</h1>
             <p>
-                Hello! my name is <b>Kevin Hany</b>, and I am a <b>computer science</b> student at Ain Shams University.
-                <br>
-                <br>
-                I am interested in multiple fields from <b>Backend development, AI/ML ,and Cyber security.</b>
-                <br>
-                <br>
-                I am open to new opportunities to <b>expanding my knowledge</b> about the wide technology spectrum.
+                Hello! My name is <strong>Kevin Hany</strong>, and I am a <strong>Computer Science</strong> student at Ain Shams University.
+            </p>
+            <p>
+                I am interested in multiple fields including <strong>Backend Development</strong>, <strong>AI/ML</strong>, and <strong>Cyber Security</strong>.
+            </p>
+            <p>
+                I am open to new opportunities for <strong>expanding my knowledge</strong> about the wide technology spectrum.
             </p>
         </div>
-    </div>
-    <div id="mainbody">
-        <div id="skills">
-            
-        </div>
-        <div id="socials">
-
-        </div>
-    </div>
-    <script src="scipt.js"></script>
+    </header>
+    
+    <main id="mainbody">
+        <section id="skills" aria-labelledby="skills-heading">
+            <h2 id="skills-heading">Technical Skills</h2>
+            <div class="skills-container">
+                <div class="skill-category">
+                <h3>Languages</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">C/C++</span>
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">Golang</span>
+                    <span class="skill-tag">Java</span>
+                    <span class="skill-tag">C#</span>
+                    <span class="skill-tag">SQL</span>
+                </div>
+                </div>
+                
+                <div class="skill-category">
+                <h3>Frameworks & Tools</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">.NET</span>
+                    <span class="skill-tag">CMake</span>
+                </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="socials" aria-labelledby="socials-heading">
+            <h2 id="socials-heading">Connect With Me</h2>
+            <div class="social-buttons">
+                <a href="https://linkedin.com/in/kevin-hany" target="_blank" class="social-btn linkedin" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                    <span>LinkedIn</span>
+                </a>
+                <a href="https://github.com/kevo-1" target="_blank" class="social-btn github" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                    <span>GitHub</span>
+                </a>
+                <a href="https://codeforces.com/profile/Kevin.H" target="_blank" class="social-btn codeforces" aria-label="Codeforces">
+                    <i class="fas fa-code"></i>
+                    <span>Codeforces</span>
+                </a>
+                <a href="https://leetcode.com/u/user1901PZ/" target="_blank" class="social-btn leetcode" aria-label="LeetCode">
+                    <i class="fas fa-laptop-code"></i>
+                    <span>LeetCode</span>
+                </a>
+            </div>
+        </section>
+    </main>
+    
+    <script src="script.js" defer></script>
 </body>
 </html>
