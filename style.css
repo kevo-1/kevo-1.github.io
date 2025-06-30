@@ -413,13 +413,21 @@ body {
 
 @media (max-width: 768px) {
     #navigationContainer {
-        justify-content: center;
+        flex-direction: column;
         padding: 1rem;
+        gap: 1rem;
     }
     
     #navigationContainer a {
-        font-size: 1.2rem;
+        font-size: 1rem;
+        margin: 0.25rem;
         padding: 0.5rem;
+    }
+
+    .nav-left, .nav-right {
+        width: 100%;
+        justify-content: space-around;
+        flex-wrap: wrap; 
     }
     
     #header {
@@ -434,6 +442,11 @@ body {
     
     #about {
         padding: 0;
+    }
+
+    .cv-button {
+        margin-top: 0.5rem;
+        order: 1;
     }
 }
 
