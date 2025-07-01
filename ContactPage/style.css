@@ -50,6 +50,30 @@ body {
     border-width: 0;
 }
 
+.status-message {
+    margin-top: 1rem;
+    padding: 0.5rem;
+    border-radius: 4px;
+    display: none;
+}
+
+.status-message.success {
+    display: block;
+    background: #d4edda;
+    color: #155724;
+}
+
+.status-message.error {
+    display: block;
+    background: #f8d7da;
+    color: #721c24;
+}
+
+#submit.loading {
+    opacity: 0.7;
+    pointer-events: none;
+}
+
 .parent {
     display: flex;
     justify-content: center;

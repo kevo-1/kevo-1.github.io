@@ -7,6 +7,17 @@
     <title>Contact Me | Kevin Bastawrous</title>
     <link rel="stylesheet" href="ContactPage/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init({
+            publicKey: "SBBB47XZS120UKEbF",
+            });
+        })();
+    </script>
 </head>
 <body>
     <nav id="navigationContainer" aria-label="Main navigation">
@@ -23,8 +34,9 @@
                 <input placeholder="email@domain.extension" required type="email" id="mail" name="mail" aria-label="Email">
                 <textarea placeholder="Your message" required id="message" name="message" aria-label="Your Message"></textarea>
                 <button type="submit" id="submit">Submit</button>
+                <div id="form-status" class="status-message"></div>
             </form>
-            
+            <script type="text/javascript" src="script.js"></script>
             <div class="contact-info">  
                 <h2>Get in touch</h2>
                 <a href="mailto:kevin.bastawrous@gmail.com" id="email">
