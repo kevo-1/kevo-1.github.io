@@ -24,7 +24,6 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
         message: document.getElementById("message").value,
     };
 
-    // Send email
     emailjs
         .send("service_all3xvf", "template_3dmdsc4", template)
         .then(() => {

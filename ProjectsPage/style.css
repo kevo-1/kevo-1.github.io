@@ -1,4 +1,3 @@
-/* Base Styles from your original page */
 @font-face {
     font-family: 'font1';
     src: url('../assets/trickster.woff') format('woff');
@@ -131,7 +130,6 @@ body {
     background: linear-gradient(90deg, var(--accent-color), #dcc66c);
 }
 
-/* Projects Specific Styles */
 .projects-container {
     display: flex;
     flex-direction: column;
