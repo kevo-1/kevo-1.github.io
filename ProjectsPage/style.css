@@ -1,0 +1,248 @@
+/* Base Styles from your original page */
+@font-face {
+    font-family: 'font1';
+    src: url('../assets/trickster.woff') format('woff');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'font2';
+    src: url('../assets/Lilex-Regular.ttf') format('truetype');
+    font-display: swap;
+}
+
+:root {
+    --bg-color: #1a1a1a;
+    --nav-bg: #282828;
+    --text-color: #b1b3b6;
+    --text-hover: #ffffff;
+    --accent-color: #53cbef;
+    --transition-speed: 0.3s;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'font2', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+#navigationContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    font-size: 1.2rem;
+    padding: 15px 30px;
+    background-color: var(--nav-bg);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+}
+
+.cv-button {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: #282828;
+    color: #b1b3b6;
+    border: 1px solid #444;
+    border-radius: 5px;
+    text-decoration: none;
+    font-family: 'font2', sans-serif;
+}
+
+.cv-button i {
+    color: #ff3e3e; 
+}
+
+.cv-button:hover {
+    color: #ff3e3e;
+    background-color: #333;
+    border-color: #555;
+}
+
+#navigationContainer a {
+    padding: 0.5rem 1rem;
+    color: #b1b3b6;
+    text-decoration: none;
+    transition: all var(--transition-speed) ease;
+    margin: 0 0.5rem; 
+}
+
+#navigationContainer a:hover {
+    color: #fff;
+    animation-name: spaced;
+    animation-duration: 1.5s;
+    animation-iteration-count:infinite;
+}
+
+#navigationContainer a[aria-current="page"] {
+    color: #53cbef;
+    font-weight: bold;
+}
+
+#mainbody {
+    flex: 1;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+#mainbody section {
+    margin-bottom: 3rem;
+}
+
+#mainbody h2 {
+    color: var(--text-hover);
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    display: inline-block;
+}
+
+#mainbody h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent-color), #dcc66c);
+}
+
+/* Projects Specific Styles */
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 2rem;
+    width: 100%;
+}
+
+.project-card {
+    background-color: #282828;
+    border-radius: 10px;
+    padding: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #444;
+    width: 100%;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    border-color: #53cbef;
+}
+
+.project-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    gap: 1rem;
+}
+
+.project-icon {
+    width: 28px;
+    height: 28px;
+    color: #53cbef;
+    flex-shrink: 0;
+}
+
+.project-title {
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.project-title:hover {
+    color: #53cbef;
+}
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.tech-tag {
+    background-color: #1a1a1a;
+    color: #b1b3b6;
+    padding: 0.4rem 1rem;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    border: 1px solid #444;
+    transition: all 0.3s ease;
+}
+
+.tech-tag:hover {
+    background-color: #333;
+    color: #53cbef;
+}
+
+.project-description {
+    color: #b1b3b6;
+    line-height: 1.7;
+    font-size: 1.05rem;
+}
+
+@media (max-width: 768px) {
+    #navigationContainer {
+        flex-direction: column;
+        padding: 1rem;
+        gap: 1rem;
+    }
+    
+    #navigationContainer a {
+        font-size: 1rem;
+        margin: 0.25rem;
+        padding: 0.5rem;
+    }
+
+    .nav-left, .nav-right {
+        width: 100%;
+        justify-content: space-around;
+        flex-wrap: wrap; 
+    }
+    
+    .project-card {
+        padding: 1.5rem;
+    }
+    
+    .project-title {
+        font-size: 1.3rem;
+    }
+    
+    .project-description {
+        font-size: 1rem;
+    }
+}
+
+@keyframes spaced {
+    0% { letter-spacing: 0.01em; }
+    50% { letter-spacing: 0.05em; }
+    100% { letter-spacing: normal; }
+}
