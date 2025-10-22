@@ -1,147 +1,368 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Kevin Hany">
-    <meta name="description" content="Portfolio of Kevin Hany, Computer Science student">
-    <title>Kevin Hany | Projects</title>
-    <link rel="preload" href="assets/trickster.woff" as="font" type="font/woff" crossorigin>
-    <link rel="preload" href="assets/Lilex-Regular.ttf" as="font" type="font/ttf" crossorigin>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="ProjectsPage/style.css">
-</head>
-<body>
-    <nav id="navigationContainer" aria-label="Main navigation">
-        <div class="nav-left">
-            <a href="assets/Kevin Bastawrous Resume.pdf" target="_blank" rel="noopener noreferrer" class="cv-button">
-                <i class="fas fa-file-pdf"></i>
-                <span>CV</span>
-            </a>
-        </div>
-        <div class="nav-right">
-            <a href="index.html">About</a>
-            <a href="projects.html" aria-current="page">Projects</a>
-            <a href="contact.html">Contact Me</a>
-        </div>
-    </nav>
-    
-    <main id="mainbody">
-        <section id="projects" aria-labelledby="projects-heading">
-            <h2 id="projects-heading">My Projects</h2>
-            
-            <div class="projects-container">
-                <div class="project-card">
-                    <div class="project-header">
-                        <svg class="project-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                            <title>Terminal Icon</title>
-                            <rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="2"/>
-                            <path d="M8 10L11 13L8 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M13 16H17" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                            <path d="M7 9L7 9.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                        </svg>
-                        <a href="https://github.com/kevo-1/camaroo" target="_blank" class="project-title">Camaroo Interpreted Language</a>
-                    </div>
-                    <div class="project-tech">
-                        <span class="tech-tag">C++</span>
-                        <span class="tech-tag">Lexing</span>
-                        <span class="tech-tag">Parsing</span>
-                        <span class="tech-tag">Interpreter</span>
-                    </div>
-                    <p class="project-description">
-                        Camaroo is an interpreted Language that I developed with a collegue of mine, where we used c++ to efficiently tokenize, parse and evaluate custom syntax into c++ code.
-                    </p>
-                </div>
-                
-                <div class="project-card">
-                    <div class="project-header">
-                        <svg class="project-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                            <title>Terminal Icon</title>
-                            <rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="2"/>
-                            <path d="M8 10L11 13L8 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M13 16H17" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                            <path d="M7 9L7 9.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                        </svg>
-                        <a href="https://github.com/kevo-1/AutoComplete" target="_blank" class="project-title">Auto Complete Text Editor</a>
-                    </div>
-                    <div class="project-tech">
-                        <span class="tech-tag">C++</span>
-                        <span class="tech-tag">Qt</span>
-                        <span class="tech-tag">Data Structures (Trie)</span>
-                    </div>
-                    <p class="project-description">
-                        Built an interactive editor with real-time text prediction using a Trie data structure, reducing lookup latency from O(n) to O(k).
-                        <br>
-                        Added frequency-based suggestions and user-defined vocabularies for adaptive predictions.
-                    </p>
-                </div>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="author" content="Kevin Hany" />
+		<meta
+			name="description"
+			content="Portfolio of Kevin Hany, Computer Science student"
+		/>
+		<title>Kevin Hany | Projects</title>
+		<link
+			rel="preload"
+			href="assets/trickster.woff"
+			as="font"
+			type="font/woff"
+			crossorigin
+		/>
+		<link
+			rel="preload"
+			href="assets/Lilex-Regular.ttf"
+			as="font"
+			type="font/ttf"
+			crossorigin
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+		/>
+		<link rel="stylesheet" href="ProjectsPage/style.css" />
+	</head>
+	<body>
+		<nav id="navigationContainer" aria-label="Main navigation">
+			<div class="nav-left">
+				<a
+					href="assets/Kevin_Bastawrous_CV.pdf"
+					target="_blank"
+					rel="noopener noreferrer"
+					class="cv-button"
+				>
+					<i class="fas fa-file-pdf"></i>
+					<span>CV</span>
+				</a>
+			</div>
+			<div class="nav-right">
+				<a href="index.html">About</a>
+				<a href="projects.html" aria-current="page">Projects</a>
+				<a href="contact.html">Contact Me</a>
+			</div>
+		</nav>
 
-                <div class="project-card">
-                    <div class="project-header">
-                        <svg class="project-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                            <title>Watchlist Icon</title>
-                            <path d="M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21Z" stroke="currentColor" stroke-width="2"/>
-                            <path d="M12 7V12L15 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M9 18L12 15L15 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                        <a href="https://github.com/kevo-1/aniwatch" target="_blank" class="project-title">Aniwatch</a>
-                    </div>
-                    <div class="project-tech">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">GUI</span>
-                        <span class="tech-tag">API</span>
-                        <span class="tech-tag">Discord RPC</span>
-                    </div>
-                    <p class="project-description">
-                        Aniwatch is a GUI application built with python that tracks the user's desired animes and uses Anilist API to retrieve anime data from Anilist's Database, and has discord live rpc to show the user's activity on discord.
-                    </p>
-                </div>
-                
-                <div class="project-card">
-                    <div class="project-header">
-                        <svg class="project-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                            <title>URL Shortener Icon</title>
-                            <path d="M10 13C10.4295 13.5741 10.9774 14.0491 11.6066 14.3929C12.2357 14.7367 12.9315 14.9411 13.6466 14.9923C14.3618 15.0435 15.0796 14.9403 15.7513 14.6897C16.4231 14.4392 17.0331 14.047 17.54 13.54L20.54 10.54C21.4508 9.59699 21.9548 8.33397 21.9434 7.02299C21.932 5.71201 21.4061 4.45794 20.4791 3.5309C19.5521 2.60386 18.298 2.07802 16.987 2.06663C15.676 2.05523 14.413 2.55921 13.47 3.47L11.75 5.18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M14 11C13.5705 10.4259 13.0226 9.95087 12.3934 9.60705C11.7643 9.26323 11.0685 9.05888 10.3534 9.00766C9.63821 8.95644 8.92042 9.05966 8.24867 9.3102C7.57691 9.56074 6.96689 9.95296 6.46 10.46L3.46 13.46C2.54921 14.403 2.04524 15.666 2.05663 16.977C2.06802 18.288 2.59386 19.5421 3.5209 20.4691C4.44794 21.3961 5.70201 21.922 7.01299 21.9334C8.32397 21.9448 9.58699 21.4408 10.53 20.53L12.24 18.82" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M8 12H16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                        </svg>
-                        <a href="https://github.com/kevo-1/URL-Shortner" target="_blank" class="project-title">URL Shortener</a>
-                    </div>
-                    <div class="project-tech">
-                        <span class="tech-tag">Golang</span>
-                        <span class="tech-tag">Web</span>
-                        <span class="tech-tag">Hashing</span>
-                    </div>
-                    <p class="project-description">
-                        A simple URL shortener written in Go, which allows users to shorten URLs and redirect them using a shortened hash.
-                    </p>
-                </div>
-                
-                <div class="project-card">
-                    <div class="project-header">
-                        <svg class="project-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                            <title>Cryptography Icon</title>
-                            <rect x="3" y="11" width="18" height="11" rx="2" stroke="currentColor" stroke-width="2"/>
-                            <path d="M7 11V7C7 5.34315 8.34315 4 10 4H14C15.6569 4 17 5.34315 17 7V11" stroke="currentColor" stroke-width="2"/>
-                            <path d="M12 15V18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                            <circle cx="12" cy="12" r="1" fill="currentColor"/>
-                            <circle cx="16" cy="12" r="1" fill="currentColor"/>
-                            <circle cx="8" cy="12" r="1" fill="currentColor"/>
-                        </svg>
-                        <a href="https://github.com/kevo-1/Image-En-De-cryption" target="_blank" class="project-title">Image Encryption/Decryption</a>
-                    </div>
-                    <div class="project-tech">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">Cryptography</span>
-                        <span class="tech-tag">Tkinter</span>
-                        <span class="tech-tag">Logistic Map</span>
-                    </div>
-                    <p class="project-description">
-                        Image-En-De-cryption is a Python project that allows you to encrypt and decrypt images using a logistic map-based algorithm, with plans to incorporate AES encryption in the future. This tool provides an easy-to-use GUI built with Tkinter for selecting, encrypting, and decrypting image files.
-                    </p>
-                </div>
-            </div>
-        </section>
-    </main>   
-</body>
+		<main id="mainbody">
+			<section id="projects" aria-labelledby="projects-heading">
+				<h2 id="projects-heading">My Projects</h2>
+
+				<div class="projects-container">
+					<div class="project-card">
+						<div class="project-header">
+							<svg
+								class="project-icon"
+								viewBox="0 0 24 24"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+								aria-hidden="true"
+							>
+								<title>Terminal Icon</title>
+								<rect
+									x="3"
+									y="5"
+									width="18"
+									height="14"
+									rx="2"
+									stroke="currentColor"
+									stroke-width="2"
+								/>
+								<path
+									d="M8 10L11 13L8 16"
+									stroke="currentColor"
+									stroke-width="2"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								/>
+								<path
+									d="M13 16H17"
+									stroke="currentColor"
+									stroke-width="2"
+									stroke-linecap="round"
+								/>
+								<path
+									d="M7 9L7 9.01"
+									stroke="currentColor"
+									stroke-width="2"
+									stroke-linecap="round"
+								/>
+							</svg>
+							<a
+								href="https://github.com/kevo-1/camaroo"
+								target="_blank"
+								class="project-title"
+								>Camaroo Interpreted Language</a
+							>
+						</div>
+						<div class="project-tech">
+							<span class="tech-tag">C++</span>
+							<span class="tech-tag">Lexing</span>
+							<span class="tech-tag">Parsing</span>
+							<span class="tech-tag">Interpreter</span>
+						</div>
+						<p class="project-description">
+							Developed an interpreted programming language using
+							<strong>C++</strong> by implementing custom lexing,
+							parsing, and evaluation logic, resulting in
+							efficient translation of high-level syntax into
+							executable C++ code.
+						</p>
+					</div>
+
+					<div class="project-card">
+						<div class="project-header">
+							<svg
+								class="project-icon"
+								viewBox="0 0 24 24"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+								aria-hidden="true"
+							>
+								<title>Terminal Icon</title>
+								<rect
+									x="3"
+									y="5"
+									width="18"
+									height="14"
+									rx="2"
+									stroke="currentColor"
+									stroke-width="2"
+								/>
+								<path
+									d="M8 10L11 13L8 16"
+									stroke="currentColor"
+									stroke-width="2"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								/>
+								<path
+									d="M13 16H17"
+									stroke="currentColor"
+									stroke-width="2"
+									stroke-linecap="round"
+								/>
+								<path
+									d="M7 9L7 9.01"
+									stroke="currentColor"
+									stroke-width="2"
+									stroke-linecap="round"
+								/>
+							</svg>
+							<a
+								href="https://github.com/kevo-1/AutoComplete"
+								target="_blank"
+								class="project-title"
+								>Auto Complete Text Editor</a
+							>
+						</div>
+						<div class="project-tech">
+							<span class="tech-tag">C++</span>
+							<span class="tech-tag">Qt</span>
+							<span class="tech-tag">Data Structures (Trie)</span>
+						</div>
+						<p class="project-description">
+							Built a text editor using
+							<strong>C++ and Qt</strong> that implements a
+							<strong>Trie-based</strong> autocomplete system,
+							reducing search complexity from O(n) to O(k) and
+							enhancing typing efficiency with adaptive,
+							frequency-based word predictions.
+						</p>
+					</div>
+
+					<div class="project-card">
+						<div class="project-header">
+							<svg
+								class="project-icon"
+								viewBox="0 0 24 24"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+								aria-hidden="true"
+							>
+								<title>Watchlist Icon</title>
+								<path
+									d="M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21Z"
+									stroke="currentColor"
+									stroke-width="2"
+								/>
+								<path
+									d="M12 7V12L15 15"
+									stroke="currentColor"
+									stroke-width="2"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								/>
+								<path
+									d="M9 18L12 15L15 18"
+									stroke="currentColor"
+									stroke-width="2"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								/>
+							</svg>
+							<a
+								href="https://github.com/kevo-1/aniwatch"
+								target="_blank"
+								class="project-title"
+								>Aniwatch</a
+							>
+						</div>
+						<div class="project-tech">
+							<span class="tech-tag">Python</span>
+							<span class="tech-tag">GUI</span>
+							<span class="tech-tag">API</span>
+							<span class="tech-tag">Discord RPC</span>
+						</div>
+						<p class="project-description">
+							Created a desktop app using
+							<strong>Python</strong> and the
+							<strong>AniList API</strong> to track user anime
+							lists, display Discord Rich Presence in real time,
+							and provide an interactive GUI for managing anime
+							collections.
+						</p>
+					</div>
+
+					<div class="project-card">
+						<div class="project-header">
+							<svg
+								class="project-icon"
+								viewBox="0 0 24 24"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+								aria-hidden="true"
+							>
+								<title>URL Shortener Icon</title>
+								<path
+									d="M10 13C10.4295 13.5741 10.9774 14.0491 11.6066 14.3929C12.2357 14.7367 12.9315 14.9411 13.6466 14.9923C14.3618 15.0435 15.0796 14.9403 15.7513 14.6897C16.4231 14.4392 17.0331 14.047 17.54 13.54L20.54 10.54C21.4508 9.59699 21.9548 8.33397 21.9434 7.02299C21.932 5.71201 21.4061 4.45794 20.4791 3.5309C19.5521 2.60386 18.298 2.07802 16.987 2.06663C15.676 2.05523 14.413 2.55921 13.47 3.47L11.75 5.18"
+									stroke="currentColor"
+									stroke-width="2"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								/>
+								<path
+									d="M14 11C13.5705 10.4259 13.0226 9.95087 12.3934 9.60705C11.7643 9.26323 11.0685 9.05888 10.3534 9.00766C9.63821 8.95644 8.92042 9.05966 8.24867 9.3102C7.57691 9.56074 6.96689 9.95296 6.46 10.46L3.46 13.46C2.54921 14.403 2.04524 15.666 2.05663 16.977C2.06802 18.288 2.59386 19.5421 3.5209 20.4691C4.44794 21.3961 5.70201 21.922 7.01299 21.9334C8.32397 21.9448 9.58699 21.4408 10.53 20.53L12.24 18.82"
+									stroke="currentColor"
+									stroke-width="2"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								/>
+								<path
+									d="M8 12H16"
+									stroke="currentColor"
+									stroke-width="2"
+									stroke-linecap="round"
+								/>
+							</svg>
+							<a
+								href="https://github.com/kevo-1/URL-Shortner"
+								target="_blank"
+								class="project-title"
+							>
+								URL Shortener Service
+							</a>
+						</div>
+						<div class="project-tech">
+							<span class="tech-tag">TypeScript</span>
+							<span class="tech-tag">NestJS</span>
+							<span class="tech-tag">Prisma</span>
+							<span class="tech-tag">PostgreSQL</span>
+							<span class="tech-tag">Redis</span>
+						</div>
+						<p class="project-description">
+							Developed a production-ready
+							<strong>URL shortener</strong> using
+							<strong>TypeScript</strong> and
+							<strong>NestJS</strong>, integrating
+							<strong>Prisma ORM</strong> with
+							<strong>PostgreSQL</strong> for persistent storage
+							and <strong>Redis caching</strong> to optimize
+							redirect latency by 40%. Built secure REST APIs with
+							request validation, DTOs, and centralized exception
+							handling, supporting 5k+ URL mappings with high
+							reliability.
+						</p>
+					</div>
+
+					<div class="project-card">
+						<div class="project-header">
+							<svg
+								class="project-icon"
+								viewBox="0 0 24 24"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+								aria-hidden="true"
+							>
+								<title>Cryptography Icon</title>
+								<rect
+									x="3"
+									y="11"
+									width="18"
+									height="11"
+									rx="2"
+									stroke="currentColor"
+									stroke-width="2"
+								/>
+								<path
+									d="M7 11V7C7 5.34315 8.34315 4 10 4H14C15.6569 4 17 5.34315 17 7V11"
+									stroke="currentColor"
+									stroke-width="2"
+								/>
+								<path
+									d="M12 15V18"
+									stroke="currentColor"
+									stroke-width="2"
+									stroke-linecap="round"
+								/>
+								<circle
+									cx="12"
+									cy="12"
+									r="1"
+									fill="currentColor"
+								/>
+								<circle
+									cx="16"
+									cy="12"
+									r="1"
+									fill="currentColor"
+								/>
+								<circle
+									cx="8"
+									cy="12"
+									r="1"
+									fill="currentColor"
+								/>
+							</svg>
+							<a
+								href="https://github.com/kevo-1/Image-En-De-cryption"
+								target="_blank"
+								class="project-title"
+								>Image Encryption/Decryption</a
+							>
+						</div>
+						<div class="project-tech">
+							<span class="tech-tag">Python</span>
+							<span class="tech-tag">Cryptography</span>
+							<span class="tech-tag">Tkinter</span>
+							<span class="tech-tag">Logistic Map</span>
+						</div>
+						<p class="project-description">
+							Implemented a <strong>Python</strong>-based image
+							encryption tool using
+							<strong>logistic map cryptography</strong>,
+							providing a secure GUI through
+							<strong>Tkinter</strong> for users to encrypt and
+							decrypt image files efficiently.
+						</p>
+					</div>
+				</div>
+			</section>
+		</main>
+	</body>
 </html>
