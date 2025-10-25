@@ -3,170 +3,1057 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta name="author" content="Kevin Hany" />
-		<meta
-			name="description"
-			content="Portfolio of Kevin Hany, Computer Science student"
-		/>
-		<title>Kevin Hany | Computer Science Student</title>
-		<link rel="stylesheet" href="style.css" />
-		<link rel="icon" href="/assets/senku.png" type="image/x-icon" />
-		<link
-			rel="preload"
-			href="assets/trickster.woff"
-			as="font"
-			type="font/woff"
-			crossorigin
-		/>
-		<link
-			rel="preload"
-			href="assets/Lilex-Regular.ttf"
-			as="font"
-			type="font/ttf"
-			crossorigin
-		/>
 		<link
 			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 		/>
+
+		<title>Kevin Hany | Backend & MLOps Engineer</title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+
+			body {
+				font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+					sans-serif;
+				background: #0a0a0a;
+				color: #e0e0e0;
+				line-height: 1.6;
+				overflow-x: hidden;
+			}
+
+			.container {
+				max-width: 1200px;
+				margin: 0 auto;
+				padding: 0 2rem;
+			}
+
+			nav {
+				position: fixed;
+				top: 0;
+				width: 100%;
+				background: rgba(10, 10, 10, 0.95);
+				backdrop-filter: blur(10px);
+				z-index: 1000;
+				border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+			}
+
+			nav .container {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				padding: 1.5rem 2rem;
+			}
+
+			.nav-cv-btn {
+				padding: 0.5rem 1.5rem;
+				font-size: 0.9rem;
+				text-decoration: none;
+				flex-shrink: 0;
+				display: flex;
+				align-items: center;
+				gap: 0.5rem;
+			}
+
+			@media (max-width: 768px) {
+				.nav-cv-btn {
+					display: none;
+				}
+			}
+
+			.logo {
+				font-size: 1.5rem;
+				font-weight: 700;
+				color: #fff;
+				text-decoration: none;
+				display: flex;
+				align-items: center;
+				gap: 0.5rem;
+			}
+
+			.logo-dot {
+				width: 8px;
+				height: 8px;
+				background: #650200;
+				border-radius: 50%;
+				animation: pulse 2s ease-in-out infinite;
+			}
+
+			@keyframes pulse {
+				0%,
+				100% {
+					opacity: 1;
+				}
+				50% {
+					opacity: 0.5;
+				}
+			}
+
+			.nav-links {
+				display: flex;
+				gap: 2rem;
+				list-style: none;
+				margin-left: auto;
+				margin-right: 2rem;
+			}
+
+			.nav-links a {
+				color: #999;
+				text-decoration: none;
+				font-size: 1.2rem;
+				transition: color 0.3s;
+			}
+
+			.nav-links a:hover {
+				color: #650200;
+			}
+
+			.hero {
+				min-height: 100vh;
+				display: flex;
+				align-items: center;
+				padding-top: 80px;
+				position: relative;
+				overflow: hidden;
+			}
+
+			.hero::before {
+				content: "";
+				position: fixed;
+				top: 0;
+				left: 0;
+				right: 0;
+				height: 100vh;
+
+				background: linear-gradient(
+						to bottom,
+						rgba(10, 10, 10, 0.7),
+						rgba(10, 10, 10, 0.95)
+					),
+					url("./assets/image.png") no-repeat center center;
+				background-size: cover;
+				background-attachment: fixed;
+				z-index: -1;
+			}
+
+			.hero .container {
+				position: relative;
+				z-index: 1;
+			}
+
+			.hero-content {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				gap: 4rem;
+				align-items: center;
+			}
+
+			.hero-text h1 {
+				font-size: 4rem;
+				font-weight: 700;
+				margin-bottom: 1rem;
+				color: #fff;
+				line-height: 1.1;
+			}
+
+			.gradient-text {
+				background: linear-gradient(135deg, #650200 0%, #ff6b6b 100%);
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+				background-clip: text;
+			}
+
+			.hero-subtitle {
+				font-size: 1.25rem;
+				color: #999;
+				margin-bottom: 2rem;
+				max-width: 500px;
+			}
+
+			.cta-buttons {
+				display: flex;
+				gap: 1rem;
+				margin-bottom: 3rem;
+			}
+
+			.btn {
+				padding: 0.875rem 2rem;
+				border-radius: 8px;
+				text-decoration: none;
+				font-weight: 500;
+				transition: all 0.3s;
+				display: inline-block;
+				font-size: 0.95rem;
+			}
+
+			.btn-primary {
+				background: #650200;
+				color: #fff;
+			}
+
+			.btn-primary:hover {
+				background: #ff3333;
+				transform: translateY(-2px);
+			}
+
+			.btn-secondary {
+				border: 1px solid #333;
+				color: #e0e0e0;
+			}
+
+			.btn-secondary:hover {
+				border-color: #650200;
+				color: #650200;
+			}
+
+			.stats {
+				display: flex;
+				gap: 3rem;
+			}
+
+			.stat-item h3 {
+				font-size: 2rem;
+				color: #650200;
+				margin-bottom: 0.25rem;
+			}
+
+			.stat-item p {
+				color: #666;
+				font-size: 0.9rem;
+			}
+
+			.hero-visual {
+				position: relative;
+				height: auto;
+			}
+
+			.about-card {
+				background: rgba(17, 17, 17, 0.95);
+				border: 1px solid #222;
+				border-radius: 16px;
+				padding: 2rem;
+				backdrop-filter: blur(10px);
+			}
+
+			.about-header {
+				text-align: center;
+				padding-bottom: 1.5rem;
+				border-bottom: 1px solid #222;
+				margin-bottom: 1.5rem;
+			}
+
+			.profile-badge {
+				width: 120px;
+				height: 120px;
+				background: rgba(255, 68, 68, 0.1);
+				border: 3px solid #650200;
+				border-radius: 50%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				margin: 0 auto 1rem;
+				overflow: hidden;
+				position: relative;
+			}
+
+			.profile-badge img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+
+			.badge-icon {
+				font-size: 2rem;
+			}
+
+			.about-header h3 {
+				color: #fff;
+				font-size: 1.5rem;
+				margin-bottom: 0.5rem;
+			}
+
+			.subtitle {
+				color: #999;
+				font-size: 0.9rem;
+			}
+
+			.about-content {
+				display: flex;
+				flex-direction: column;
+				gap: 1.25rem;
+			}
+
+			.info-item {
+				display: flex;
+				gap: 1rem;
+				align-items: flex-start;
+			}
+
+			.info-icon {
+				font-size: 1.5rem;
+				width: 40px;
+				height: 40px;
+				background: rgba(255, 68, 68, 0.1);
+				border-radius: 8px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				flex-shrink: 0;
+			}
+
+			.info-item strong {
+				color: #fff;
+				display: block;
+				margin-bottom: 0.25rem;
+				font-size: 0.95rem;
+			}
+
+			.info-item p {
+				color: #999;
+				font-size: 0.85rem;
+				line-height: 1.6;
+				margin: 0;
+			}
+
+			.skills {
+				padding: 6rem 0;
+			}
+
+			.section-title {
+				text-align: center;
+				font-size: 2.5rem;
+				margin-bottom: 3rem;
+				color: #fff;
+			}
+
+			.skills-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+				gap: 2rem;
+			}
+
+			.skill-card {
+				background: #111;
+				border: 1px solid #222;
+				border-radius: 12px;
+				padding: 2rem;
+				transition: all 0.3s;
+			}
+
+			.skill-card:hover {
+				border-color: #650200;
+				transform: translateY(-5px);
+			}
+
+			.skill-icon {
+				width: 48px;
+				height: 48px;
+				background: rgba(255, 68, 68, 0.1);
+				border-radius: 12px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				margin-bottom: 1rem;
+				font-size: 1.5rem;
+			}
+
+			.skill-card h3 {
+				font-size: 1.25rem;
+				margin-bottom: 0.75rem;
+				color: #fff;
+			}
+
+			.skill-card p {
+				color: #999;
+				font-size: 0.9rem;
+				margin-bottom: 1rem;
+			}
+
+			.tech-tags {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 0.5rem;
+			}
+
+			.tech-tag {
+				padding: 0.25rem 0.75rem;
+				background: rgba(255, 255, 255, 0.05);
+				border: 1px solid #333;
+				border-radius: 20px;
+				font-size: 0.75rem;
+				color: #999;
+			}
+
+			.projects {
+				padding: 6rem 0;
+			}
+
+			.project-card {
+				background: #111;
+				border: 1px solid #222;
+				border-radius: 12px;
+				padding: 2.5rem;
+				margin-bottom: 2rem;
+				transition: all 0.3s;
+				display: grid;
+				grid-template-columns: 1fr 2fr;
+				gap: 2rem;
+				align-items: start;
+			}
+
+			.project-card:hover {
+				border-color: #650200;
+			}
+
+			.project-info h3 {
+				font-size: 1.5rem;
+				color: #fff;
+				margin-bottom: 1rem;
+			}
+
+			.project-info p {
+				color: #999;
+				margin-bottom: 1.5rem;
+				line-height: 1.8;
+			}
+
+			.project-links {
+				display: flex;
+				gap: 1rem;
+			}
+
+			.project-links a {
+				color: #650200;
+				text-decoration: none;
+				font-size: 0.9rem;
+				display: flex;
+				align-items: center;
+				gap: 0.5rem;
+				transition: color 0.3s;
+			}
+
+			.project-links a:hover {
+				color: #ff3333;
+			}
+
+			.project-meta {
+				display: flex;
+				flex-direction: column;
+				gap: 1.5rem;
+			}
+
+			.meta-item {
+				display: flex;
+				flex-direction: column;
+				gap: 0.5rem;
+			}
+
+			.meta-label {
+				color: #666;
+				font-size: 0.85rem;
+				text-transform: uppercase;
+				letter-spacing: 0.1em;
+			}
+
+			.meta-value {
+				color: #fff;
+				font-weight: 500;
+			}
+
+			.contact {
+				padding: 6rem 0;
+			}
+
+			.contact-content {
+				max-width: 600px;
+				margin: 0 auto;
+				text-align: center;
+			}
+
+			.contact-content h2 {
+				font-size: 2.5rem;
+				margin-bottom: 1rem;
+				color: #fff;
+			}
+
+			.contact-content p {
+				color: #999;
+				margin-bottom: 2rem;
+			}
+
+			.social-links {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+				gap: 1rem;
+				margin-top: 2.5rem;
+			}
+
+			.social-btn {
+				display: flex;
+				align-items: center;
+				gap: 0.5rem;
+				border: 1px solid #333;
+				border-radius: 8px;
+				padding: 0.6rem 1rem;
+				color: #999;
+				text-decoration: none;
+				font-size: 0.95rem;
+				transition: all 0.3s ease;
+				background: rgba(17, 17, 17, 0.8);
+				backdrop-filter: blur(8px);
+			}
+
+			.social-btn i {
+				font-size: 1rem;
+			}
+
+			.social-btn:hover {
+				transform: translateY(-3px);
+			}
+
+			/* Optional platform accent tweaks */
+			.social-btn.linkedin:hover i {
+				color: #0a66c2;
+			}
+			.social-btn.github:hover i {
+				color: #fff;
+			}
+			.social-btn.codeforces:hover i {
+				color: #f39c12;
+			}
+			.social-btn.leetcode:hover i {
+				color: #f89f1b;
+			}
+
+			footer {
+				padding: 2rem 0;
+				text-align: center;
+				color: #666;
+				border-top: 1px solid #222;
+			}
+
+			@media (max-width: 768px) {
+				.hero-content {
+					grid-template-columns: 1fr;
+				}
+
+				.hero-text h1 {
+					font-size: 2.5rem;
+				}
+
+				.project-card {
+					grid-template-columns: 1fr;
+				}
+
+				.nav-links {
+					display: none;
+				}
+
+				.stats {
+					flex-wrap: wrap;
+					gap: 2rem;
+				}
+			}
+		</style>
 	</head>
 	<body>
-		<div id="curtain">
-			<div class="intro-text" id="introText" aria-hidden="true">
-				Hello, and welcome!
-			</div>
-		</div>
-
-		<nav id="navigationContainer" aria-label="Main navigation">
-			<div class="nav-left">
-				<a
-					href="assets/Kevin_Bastawrous_CV.pdf"
-					target="_blank"
-					rel="noopener noreferrer"
-					class="cv-button"
-				>
-					<i class="fas fa-file-pdf"></i>
-					<span>CV</span>
+		<nav>
+			<div class="container">
+				<a href="#" class="logo">
+					<div class="logo-dot"></div>
+					Kevin, Bastawrous
 				</a>
-			</div>
-			<div class="nav-right">
-				<a href="index.html" aria-current="page">About</a>
-				<a href="projects.html">Projects</a>
-				<a href="contact.html">Contact Me</a>
+				<ul class="nav-links">
+					<li><a href="#about">About</a></li>
+					<li><a href="#skills">Skills</a></li>
+					<li><a href="#projects">Projects</a></li>
+					<li><a href="#contact">Contact</a></li>
+				</ul>
+				<a
+					href="./assets/Kevin_Bastawrous_CV.pdf"
+					target="_blank"
+					class="btn btn-primary nav-cv-btn"
+				>
+					<i class="fas fa-file-alt"></i>
+					CV
+				</a>
 			</div>
 		</nav>
 
-		<header id="header">
-			<div id="pfpImg">
-				<img
-					id="pfp"
-					src="assets/pfp.jpg"
-					alt="Kevin Hany's profile picture"
-					width="300"
-					height="300"
-				/>
-			</div>
-			<div id="about">
-				<h1>About Me</h1>
-				<p>
-					Hello! My name is <strong>Kevin Hany</strong>, and I am a
-					<strong>Computer Science</strong> student at Ain Shams
-					University.
-				</p>
-				<p>
-					I am interested in multiple fields including
-					<strong>Backend Development</strong>,
-					<strong>AI/ML</strong>, and <strong>MLOps</strong>.
-				</p>
-				<p>
-					I am open to new opportunities for
-					<strong>expanding my knowledge</strong> about the wide
-					technology spectrum.
-				</p>
-			</div>
-		</header>
-
-		<main id="mainbody">
-			<section id="skills" aria-labelledby="skills-heading">
-				<h2 id="skills-heading">Technical Skills</h2>
-				<div class="skills-container">
-					<div class="skill-category">
-						<h3>Languages</h3>
-						<div class="skill-tags">
-							<span class="skill-tag">C/C++</span>
-							<span class="skill-tag">Python</span>
-							<span class="skill-tag">Golang</span>
-							<span class="skill-tag">Javascript</span>
-							<span class="skill-tag">SQL</span>
-							<span class="skill-tag">TypeScript</span>
-							<span class="skill-tag">Java</span>
+		<section class="hero" id="about">
+			<div class="container">
+				<div class="hero-content">
+					<div class="hero-text">
+						<h1>
+							Backend & <br />
+							<span class="gradient-text">MLOps Engineer</span>
+						</h1>
+						<p class="hero-subtitle">
+							Building scalable systems and ML pipelines.
+							Passionate about clean code and distributed
+							architecture.
+						</p>
+						<div class="cta-buttons">
+							<a href="#projects" class="btn btn-primary"
+								>View Projects</a
+							>
+							<a href="#contact" class="btn btn-secondary"
+								>Get in Touch</a
+							>
+						</div>
+						<div class="stats">
+							<div class="stat-item">
+								<h3>700+</h3>
+								<p>Problems Solved</p>
+							</div>
+							<div class="stat-item">
+								<h3>5k+</h3>
+								<p>API Requests/min</p>
+							</div>
+							<div class="stat-item">
+								<h3>40%</h3>
+								<p>Latency Reduction</p>
+							</div>
 						</div>
 					</div>
+					<div class="hero-visual">
+						<div class="about-card">
+							<div class="about-header">
+								<div class="profile-badge">
+									<!-- Replace with your actual photo URL -->
+									<img
+										src="./assets/pfp.jpg"
+										alt="Kevin Hany Bastawrous"
+									/>
+								</div>
+								<h3>Kevin Hany Bastawrous</h3>
+								<p class="subtitle">
+									Computer Science Student • Cairo, Egypt
+								</p>
+							</div>
 
-					<div class="skill-category">
-						<h3>Frameworks & Tools</h3>
-						<div class="skill-tags">
-							<span class="skill-tag">Postman</span>
-							<span class="skill-tag">NestJS</span>
-							<span class="skill-tag">NodeJS</span>
-							<span class="skill-tag">ExpressJS</span>
-							<span class="skill-tag">Git</span>
-							<span class="skill-tag">Github Actions</span>
-							<span class="skill-tag">Docker</span>
-							<span class="skill-tag">Redis</span>
-							<span class="skill-tag">MongoDB</span>
-							<span class="skill-tag">PostgreSQL</span>
-							<span class="skill-tag">MySQL</span>
-							<span class="skill-tag">Scikit-learn</span>
-							<span class="skill-tag">Tensor flow</span>
+							<div class="about-content">
+								<div class="info-item">
+									<span class="info-icon">📚</span>
+									<div>
+										<strong>Education</strong>
+										<p>
+											Ain Shams University - CGPA:
+											3.85/4.0
+										</p>
+									</div>
+								</div>
+
+								<div class="info-item">
+									<span class="info-icon">💻</span>
+									<div>
+										<strong>Experience</strong>
+										<p>
+											Backend Vice Head @ Open Source
+											Community
+										</p>
+									</div>
+								</div>
+
+								<div class="info-item">
+									<span class="info-icon">⭐</span>
+									<div>
+										<strong>Achievements</strong>
+										<p>Codeforces Pupil (1299 rating)</p>
+										<p>ECPC 2025 Competitor (140th rank)</p>
+									</div>
+								</div>
+
+								<div class="info-item">
+									<span class="info-icon">🎯</span>
+									<div>
+										<strong>Current Focus</strong>
+										<p>
+											Building scalable backend systems,
+											ML pipelines, and mentoring 30+
+											developers in modern software
+											engineering practices
+										</p>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
-			</section>
+			</div>
+		</section>
 
-			<section id="socials" aria-labelledby="socials-heading">
-				<h2 id="socials-heading">Connect With Me</h2>
-				<div class="social-buttons">
-					<a
-						href="https://linkedin.com/in/kevin-hany"
-						target="_blank"
-						class="social-btn linkedin"
-						aria-label="LinkedIn"
-					>
-						<i class="fab fa-linkedin-in"></i>
-						<span>LinkedIn</span>
-					</a>
-					<a
-						href="https://github.com/kevo-1"
-						target="_blank"
-						class="social-btn github"
-						aria-label="GitHub"
-					>
-						<i class="fab fa-github"></i>
-						<span>GitHub</span>
-					</a>
-					<a
-						href="https://codeforces.com/profile/Kevin.H"
-						target="_blank"
-						class="social-btn codeforces"
-						aria-label="Codeforces"
-					>
-						<i class="fas fa-code"></i>
-						<span>Codeforces</span>
-					</a>
-					<a
-						href="https://leetcode.com/u/user1901PZ/"
-						target="_blank"
-						class="social-btn leetcode"
-						aria-label="LeetCode"
-					>
-						<i class="fas fa-laptop-code"></i>
-						<span>LeetCode</span>
-					</a>
+		<section class="skills" id="skills">
+			<div class="container">
+				<h2 class="section-title">Technical Expertise</h2>
+				<div class="skills-grid">
+					<div class="skill-card">
+						<div class="skill-icon">{ }</div>
+						<h3>Backend Development</h3>
+						<p>
+							Building robust, scalable APIs with modern
+							frameworks and clean architecture patterns
+						</p>
+						<div class="tech-tags">
+							<span class="tech-tag">Node.js</span>
+							<span class="tech-tag">NestJS</span>
+							<span class="tech-tag">TypeScript</span>
+							<span class="tech-tag">Go</span>
+						</div>
+					</div>
+
+					<div class="skill-card">
+						<div class="skill-icon">[ ]</div>
+						<h3>Database & Caching</h3>
+						<p>
+							Designing efficient data models and implementing
+							caching strategies for optimal performance
+						</p>
+						<div class="tech-tags">
+							<span class="tech-tag">PostgreSQL</span>
+							<span class="tech-tag">MongoDB</span>
+							<span class="tech-tag">Redis</span>
+							<span class="tech-tag">Prisma ORM</span>
+						</div>
+					</div>
+
+					<div class="skill-card">
+						<div class="skill-icon">∑</div>
+						<h3>ML & Data Science</h3>
+						<p>
+							Developing end-to-end machine learning pipelines
+							with focus on production-ready solutions
+						</p>
+						<div class="tech-tags">
+							<span class="tech-tag">Python</span>
+							<span class="tech-tag">TensorFlow</span>
+							<span class="tech-tag">Scikit-learn</span>
+							<span class="tech-tag">Pandas</span>
+						</div>
+					</div>
+
+					<div class="skill-card">
+						<div class="skill-icon">≡</div>
+						<h3>DevOps & Tools</h3>
+						<p>
+							Containerizing applications and implementing CI/CD
+							pipelines for seamless deployments
+						</p>
+						<div class="tech-tags">
+							<span class="tech-tag">Docker</span>
+							<span class="tech-tag">Git</span>
+							<span class="tech-tag">GitHub Actions</span>
+							<span class="tech-tag">Linux</span>
+						</div>
+					</div>
+
+					<div class="skill-card">
+						<div class="skill-icon">⟨ ⟩</div>
+						<h3>System Design</h3>
+						<p>
+							Architecting distributed systems with microservices
+							and event-driven architecture
+						</p>
+						<div class="tech-tags">
+							<span class="tech-tag">Microservices</span>
+							<span class="tech-tag">REST APIs</span>
+							<span class="tech-tag">WebSockets</span>
+							<span class="tech-tag">Design Patterns</span>
+						</div>
+					</div>
+
+					<div class="skill-card">
+						<div class="skill-icon">∴</div>
+						<h3>Competitive Programming</h3>
+						<p>
+							Solving complex algorithmic problems with optimal
+							time and space complexity
+						</p>
+						<div class="tech-tags">
+							<span class="tech-tag">C++</span>
+							<span class="tech-tag">Algorithms</span>
+							<span class="tech-tag">Data Structures</span>
+							<span class="tech-tag">DSA</span>
+						</div>
+					</div>
 				</div>
-			</section>
-		</main>
+			</div>
+		</section>
 
-		<script src="script.js" defer></script>
+		<section class="projects" id="projects">
+			<div class="container">
+				<h2 class="section-title">Featured Projects</h2>
+
+				<div class="project-card">
+					<div class="project-meta">
+						<div class="meta-item">
+							<span class="meta-label">Type</span>
+							<span class="meta-value">Backend Service</span>
+						</div>
+						<div class="meta-item">
+							<span class="meta-label">Year</span>
+							<span class="meta-value">2025</span>
+						</div>
+						<div class="meta-item">
+							<span class="meta-label">Stack</span>
+							<div class="tech-tags">
+								<span class="tech-tag">TypeScript</span>
+								<span class="tech-tag">NestJS</span>
+								<span class="tech-tag">Redis</span>
+							</div>
+						</div>
+					</div>
+					<div class="project-info">
+						<h3>URL Shortener Service</h3>
+						<p>
+							Production-ready URL shortening service managing
+							5,000+ mappings with 40% latency optimization
+							through Redis caching and PostgreSQL query
+							optimization. Implements secure REST APIs with
+							NestJS, Prisma ORM, request validation, and
+							centralized exception handling.
+						</p>
+						<div class="project-links">
+							<a
+								href="https://github.com/kevo-1/URL-Shortner"
+								target="_blank"
+							>
+								<span>→</span> View on GitHub
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="project-card">
+					<div class="project-meta">
+						<div class="meta-item">
+							<span class="meta-label">Type</span>
+							<span class="meta-value">ML Pipeline</span>
+						</div>
+						<div class="meta-item">
+							<span class="meta-label">Year</span>
+							<span class="meta-value">2025</span>
+						</div>
+						<div class="meta-item">
+							<span class="meta-label">Stack</span>
+							<div class="tech-tags">
+								<span class="tech-tag">Python</span>
+								<span class="tech-tag">Scikit-learn</span>
+								<span class="tech-tag">Pandas</span>
+							</div>
+						</div>
+					</div>
+					<div class="project-info">
+						<h3>Hospital Readmission Predictor</h3>
+						<p>
+							End-to-end ML pipeline predicting 30-day patient
+							readmission using ensemble methods (Random Forest,
+							Gradient Boosting). Features comprehensive
+							preprocessing with domain-informed imputation, SMOTE
+							oversampling for class imbalance, and rigorous
+							evaluation through stratified k-fold
+							cross-validation.
+						</p>
+						<div class="project-links">
+							<a href="#" target="_blank">
+								<span>→</span> View Project
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="project-card">
+					<div class="project-meta">
+						<div class="meta-item">
+							<span class="meta-label">Type</span>
+							<span class="meta-value">Language Design</span>
+						</div>
+						<div class="meta-item">
+							<span class="meta-label">Year</span>
+							<span class="meta-value">2024</span>
+						</div>
+						<div class="meta-item">
+							<span class="meta-label">Stack</span>
+							<div class="tech-tags">
+								<span class="tech-tag">C++</span>
+								<span class="tech-tag">CMake</span>
+								<span class="tech-tag">Compiler Design</span>
+							</div>
+						</div>
+					</div>
+					<div class="project-info">
+						<h3>Camaroo Programming Language</h3>
+						<p>
+							Custom interpreted programming language implementing
+							complete Lexer, Recursive Descent Parser, and
+							Abstract Syntax Tree. Features LL(1) parsing, symbol
+							table management, and panic-mode error recovery for
+							robust syntax error handling.
+						</p>
+						<div class="project-links">
+							<a
+								href="https://github.com/kevo-1/camaroo"
+								target="_blank"
+							>
+								<span>→</span> View on GitHub
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="project-card">
+					<div class="project-meta">
+						<div class="meta-item">
+							<span class="meta-label">Type</span>
+							<span class="meta-value">Desktop App</span>
+						</div>
+						<div class="meta-item">
+							<span class="meta-label">Year</span>
+							<span class="meta-value">2025</span>
+						</div>
+						<div class="meta-item">
+							<span class="meta-label">Stack</span>
+							<div class="tech-tags">
+								<span class="tech-tag">C++</span>
+								<span class="tech-tag">Qt</span>
+								<span class="tech-tag">Trie</span>
+							</div>
+						</div>
+					</div>
+					<div class="project-info">
+						<h3>AutoComplete Text Editor</h3>
+						<p>
+							Interactive text editor with real-time autocomplete
+							using Trie-based prefix matching, reducing lookup
+							complexity from O(n) to O(k). Features
+							frequency-based ranking and custom dictionary
+							management processing 10,000+ entries with sub-50ms
+							response time.
+						</p>
+						<div class="project-links">
+							<a
+								href="https://github.com/kevo-1/AutoComplete"
+								target="_blank"
+							>
+								<span>→</span> View on GitHub
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="contact" id="contact">
+			<div class="container">
+				<div class="contact-content">
+					<h2>Let's Build Something</h2>
+					<p>
+						Open to backend engineering roles, ML engineering
+						positions, and exciting collaboration opportunities.
+					</p>
+					<a
+						href="mailto:kevin.bastawrous@gmail.com"
+						class="btn btn-primary"
+						>Get In Touch</a
+					>
+
+					<div class="social-links">
+						<a
+							href="https://linkedin.com/in/kevin-hany"
+							target="_blank"
+							class="social-btn linkedin"
+							aria-label="LinkedIn"
+						>
+							<i class="fab fa-linkedin-in"></i>
+							<span>LinkedIn</span>
+						</a>
+
+						<a
+							href="https://github.com/kevo-1"
+							target="_blank"
+							class="social-btn github"
+							aria-label="GitHub"
+						>
+							<i class="fab fa-github"></i>
+							<span>GitHub</span>
+						</a>
+
+						<a
+							href="https://codeforces.com/profile/Kevin.H"
+							target="_blank"
+							class="social-btn codeforces"
+							aria-label="Codeforces"
+						>
+							<i class="fas fa-code"></i>
+							<span>Codeforces</span>
+						</a>
+
+						<a
+							href="https://leetcode.com/u/user1901PZ/"
+							target="_blank"
+							class="social-btn leetcode"
+							aria-label="LeetCode"
+						>
+							<i class="fas fa-laptop-code"></i>
+							<span>LeetCode</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<footer>
+			<div class="container">
+				<p>
+					© 2025 Kevin Hany Bastawrous. Built with passion for clean
+					code.
+				</p>
+			</div>
+		</footer>
+
+		<script>
+			document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+				anchor.addEventListener("click", function (e) {
+					e.preventDefault();
+					const target = document.querySelector(
+						this.getAttribute("href")
+					);
+					if (target) {
+						target.scrollIntoView({
+							behavior: "smooth",
+							block: "start",
+						});
+					}
+				});
+			});
+
+			const observerOptions = {
+				threshold: 0.1,
+				rootMargin: "0px 0px -100px 0px",
+			};
+
+			const observer = new IntersectionObserver((entries) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) {
+						entry.target.style.opacity = "1";
+						entry.target.style.transform = "translateY(0)";
+					}
+				});
+			}, observerOptions);
+
+			document
+				.querySelectorAll(".skill-card, .project-card")
+				.forEach((el) => {
+					el.style.opacity = "0";
+					el.style.transform = "translateY(20px)";
+					el.style.transition =
+						"opacity 0.6s ease, transform 0.6s ease";
+					observer.observe(el);
+				});
+		</script>
 	</body>
 </html>
